@@ -1,0 +1,406 @@
+@charset "utf-8";
+
+/* リセット（任意） */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-color {
+  background: #e9ecc0;
+}
+
+.bg-color {
+  background: rgba(255,255,255,0.6);
+  border-radius: 20px;
+}
+
+main, aside {
+  border-radius: 20px;
+}
+
+/* .header-img {
+  text-align: center;
+  margin: 20px;
+} */
+
+
+
+
+/* nav（上に表示） */
+.nav {
+  display: flex;
+  justify-content: center;
+  /* 左右中央 */
+  text-align: center;
+  height: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav ul {
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav a {
+  width: 140px;
+  display: inline-block;
+  padding: 15px 25px;
+  background: #1e8a68;
+  /* エメラルド色 */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav img {
+  width: 400px;
+  height: 200px;
+}
+/* ホバー時 */
+.nav-list a:hover {
+  background-color: #a9ecc8;
+  /* 明るい緑 */
+}
+
+
+/* main + aside の親 */
+.wrapper {
+  max-width: 1000px;
+  margin: 30px auto;
+  display: flex;
+  gap: 20px;
+}
+
+/* 7 : 3 */
+main {
+  flex: 7;
+  padding: 20px;
+
+}
+
+aside {
+  flex: 3;
+  padding: 20px;
+
+}
+
+
+/*スライダー*/
+.slider {
+  width: 800px;
+  height: 450px;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 2400px;
+  /* 800px × 3枚 */
+  transition: transform 0.8s ease;
+}
+
+.slides img {
+  width: 800px;
+  height: 600px;
+  flex-shrink: 0;
+  /* ← 重要：画像が縮まないようにする */
+  object-fit: cover;
+}
+
+
+/* ボタン */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+/*　京都　*/
+/*img　大きさ*/
+.img-kyouto img,
+.img-nagoya img {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+/*section　の間*/
+.k-section {
+  margin: 30px auto;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  /* 縦中央揃え */
+  gap: 16px;
+  /* 画像と文字の間隔 */
+}
+
+/*三重　鳥羽水族館*/
+
+.suisou-img img {
+  display: block;
+  width: 500px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-auto-rows: 150px;
+  gap: 10px;
+  font-size: 14px;
+  color: #74768c;
+  margin: auto;
+  place-content: center;
+}
+
+.item {
+  padding: 10px;
+  max-width: 300px;
+}
+
+.item img {
+  width: 150px;
+  border-radius: 20px;
+}
+
+.aside-style {
+  line-height: 1.5em;
+}
+
+.aside-style p {
+  margin: 15px auto;
+}
+
+.text-toba {
+  margin: 20px auto;
+  text-align: center;
+  width: 500px;
+}
+
+.time-schedule {
+  list-style: none;
+  margin: 0 auto 0 7em;
+  padding-left: 20px;
+  border-left: 6px solid #1e8a68;
+  box-sizing: border-box;
+}
+
+.time-schedule span.place {
+  width: 7em;
+  display: inline-block;
+  margin-left: -10em;
+  padding: 0 0 5px 5px;
+  margin-top: 15px;
+  vertical-align: top;
+  position: relative;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.time-schedule .sch_box {
+  display: inline-block;
+  width: 100%;
+  margin-left: 30px;
+  padding: 15px 10px 15px 10px;
+  vertical-align: middle;
+  background: #e9ecc0;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+/*●の部分*/
+.time-schedule span.place::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  top: 0;
+  background: #1e8a68;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.sch_box {
+  margin: 5px auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin {
+  margin: 20px auto;
+}
+
+.aside-margin:nth-child(n+2) {
+  margin-top: 40px;
+}
+
+
+/* サムネイル */
+.thumb {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+
+.mie-pict {
+  width: 150px;
+  height: 100px;
+}
+
+.crop {
+  object-fit: cover;
+  object-position: center center;
+  /* 切り出す位置 */
+}
+
+.thumb:hover, .mie-pict:hover{
+  opacity: 0.8;
+}
+
+/* モーダル */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+  /* navより前に */
+}
+
+/* 表示中 */
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 拡大画像 */
+.modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(0.95);
+  transition: transform 0.4s ease;
+}
+
+.modal.active .modal-img {
+  transform: scale(1);
+}
+
+/* 矢印 */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
+
+/* ×ボタン（← ここ重要） */
+.close {
+  position: absolute;
+  top: 30px;
+  /* ← 30px下げる */
+  right: 30px;
+  font-size: 32px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* スマホサイズになったら縦並び */
+@media (max-width: 600px) {
+  .box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .box img {
+    width: 150px;
+    height: 100px;
+  }
+
+  /*三重　写真配置３→２へ*/
+  #container {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 12px;
+    width:300px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    /* ここで縦に切り替える */
+    gap: 5px;
+  }
+
+/* nav（上に表示） */
+.nav {
+  height: 120px;
+}
+
+.nav a {
+  padding: 5px 40px;
+  background: #1e8a68;
+  /* エメラルド色 */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+}
+
